@@ -1,0 +1,22 @@
+# R session junk -- never useful to a collaborator
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+.Renviron
+.Rproj.user/
+Rplots.pdf
+
+# Quarto / knitr build output
+/.quarto/
+*_files/
+*_cache/
+
+# Operating system junk
+.DS_Store
+Thumbs.db
+
+# Note: figures/ IS tracked in this repo on purpose, so you can see your
+# saved plot show up in GitHub Desktop. In your own projects you may prefer
+# to ignore generated output instead:
+# figures/*.png
