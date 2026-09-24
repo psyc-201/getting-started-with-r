@@ -7,16 +7,15 @@
 .Rproj.user/
 Rplots.pdf
 
-# Quarto / knitr build output
+# Quarto build output
 /.quarto/
-*_files/
 *_cache/
 
 # Operating system junk
 .DS_Store
 Thumbs.db
 
-# Note: figures/ IS tracked in this repo on purpose, so you can see your
-# saved plot show up in GitHub Desktop. In your own projects you may prefer
-# to ignore generated output instead:
-# figures/*.png
+# Rendered output. Delete these two lines if your instructor asks you to
+# commit the rendered HTML with your assignment.
+getting-started.html
+getting-started_files/

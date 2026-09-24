@@ -6,13 +6,13 @@ first lab. When you are done you will have:
 - R and RStudio installed
 - GitHub Desktop installed and connected to your GitHub account
 - Your own copy of this repository on your laptop
-- A script that loads the tidyverse, reads a data file, and saves a figure
+- One Quarto document that loads the tidyverse and reads a data file
 - One commit of your own, pushed to GitHub
 
 Everything here is point-and-click. **You do not need to use the terminal.**
 
 > Already comfortable with R, git, and the command line? Skip to
-> [Part 3](#part-3-run-the-scripts), or see the
+> [Part 3](#part-3-render-the-document), or see the
 > [201 Fundamentals Workshop](https://psyc-201.github.io/fundamentals-workshop/)
 > for the terminal-based setup (Homebrew, `gh`, Python, Quarto). We will cover
 > JavaScript and other tools later in the quarter.
@@ -21,8 +21,8 @@ Everything here is point-and-click. **You do not need to use the terminal.**
 
 ## Part 1. Install the software
 
-Detailed, platform-by-platform instructions with screenshots-worth-of-detail are
-in **[docs/install-guide.md](docs/install-guide.md)**. The short version:
+Detailed, platform-by-platform instructions are in
+**[docs/install-guide.md](docs/install-guide.md)**. The short version:
 
 | What | Where | Notes |
 |---|---|---|
@@ -49,37 +49,30 @@ open RStudio.
 Step-by-step version, including what to do when it goes sideways:
 **[docs/github-desktop.md](docs/github-desktop.md)**.
 
-## Part 3. Run the scripts
+## Part 3. Render the document
 
-In GitHub Desktop, click **Open the repository in your external editor**, or just
-find the folder and **double-click `getting-started-with-r.Rproj`**. That opens
-RStudio *inside this project* — which is what makes the file paths in the
-scripts work on your computer and on everyone else's.
+Find the folder and **double-click `getting-started-with-r.Rproj`**. That opens
+RStudio *inside this project* — which is what makes the file path in the
+document work on your computer and on everyone else's.
 
-Then open and run these three files in order (the Files pane, bottom right):
+Then open **`getting-started.qmd`** from the Files pane (bottom right) and click
+**Render**. The first time, you will need to run the `install.packages("tidyverse")`
+chunk by hand — click the green arrow at its top right and wait 5–15 minutes.
 
-| File | What it does | How long |
-|---|---|---|
-| `01-install-packages.R` | Installs the tidyverse. Run once, ever. | 5–15 min |
-| `02-check-your-setup.R` | Prints a checklist of what is working. | seconds |
-| `03-first-script.R` | Reads data, summarizes it, saves a plot. | seconds |
+If the document renders and shows you 48 rows of data, you are set up correctly.
 
-To run a whole file, click **Source** at the top of the editor pane. To run one
-line at a time — better for learning — put your cursor on a line and press
-`Cmd+Enter` (Mac) or `Ctrl+Enter` (Windows).
-
-When `02-check-your-setup.R` prints `OK` on every line, you are set up correctly.
+Quarto is the authoring tool we use for every assignment this quarter, and it
+comes bundled with RStudio. The course textbook covers it in
+[Experimentology, Appendix C](https://experimentology.io/102-rmarkdown.html)
+— worth reading once you have this working.
 
 ## Part 4. Make a change and commit it
 
-The bottom of `03-first-script.R` has three small exercises. Do at least one,
-then:
-
-1. Save the file (`Cmd+S` / `Ctrl+S`).
-2. Switch to GitHub Desktop. Your changes are listed on the left, with the
-   old and new lines side by side.
-3. Write a short summary in the box at the bottom left, e.g.
-   `Plot accuracy instead of RT`.
+1. Put your name in the `author:` line at the top of `getting-started.qmd`, and
+   save (`Cmd+S` / `Ctrl+S`).
+2. Switch to GitHub Desktop. Your change is listed on the left, old and new
+   lines side by side.
+3. Write a short summary in the box at the bottom left, e.g. `Add my name`.
 4. Click **Commit to main**, then **Push origin**.
 5. Reload your repository page on github.com. Your change is there.
 
@@ -90,12 +83,9 @@ That loop — *edit, save, commit, push* — is the whole workflow for the quart
 ```
 getting-started-with-r/
 ├── getting-started-with-r.Rproj   open this to start work
-├── 01-install-packages.R          run once
-├── 02-check-your-setup.R          run when something feels broken
-├── 03-first-script.R              your first analysis
+├── getting-started.qmd            load packages, load data
 ├── data/
 │   └── example_rt_data.csv        48 rows of simulated reaction-time data
-├── figures/                       your saved plot lands here
 └── docs/
     ├── install-guide.md           installing R, RStudio, GitHub Desktop
     ├── github-desktop.md          clone, commit, push, and the vocabulary
@@ -104,12 +94,11 @@ getting-started-with-r/
 
 The data in `data/example_rt_data.csv` are **simulated**, not real. They are
 shaped like a Stroop task (congruent vs. incongruent trials, children vs.
-adults) so the plots look like something you might actually report.
+adults) so they look like something you might actually analyze.
 
 ## Stuck?
 
 Read **[docs/troubleshooting.md](docs/troubleshooting.md)** first — it covers
 the handful of errors that account for nearly every problem. If that does not
-help, post the **exact** error message in the course forum, along with the
-output of running `02-check-your-setup.R`. "It doesn't work" is much harder to
-help with than a pasted error.
+help, post the **exact** error message in the course forum. "It doesn't work" is
+much harder to help with than a pasted error.

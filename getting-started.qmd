@@ -1,0 +1,53 @@
+---
+title: "Getting Started with R"
+author: "Your name here"
+date: today
+format: html
+---
+
+:::{.callout-note title="Goals"}
+1. Load the packages we need
+2. Load a data file
+:::
+
+If this document renders without errors, your setup works.
+
+Click **Render** at the top of this pane to run everything. To run one chunk at
+a time, click the green arrow at its top right.
+
+Background reading:
+[Experimentology, Appendix C](https://experimentology.io/102-rmarkdown.html).
+
+## (1) Load packages
+
+Run this once, by hand, if you have never installed the tidyverse. It is set to
+`eval: false` so it does not run every time you render.
+
+```{r}
+#| eval: false
+install.packages("tidyverse")
+```
+
+```{r}
+#| message: false
+library(tidyverse)
+```
+
+## (2) Load the data
+
+Code chunks treat the folder holding this `.qmd` file as the working directory,
+so `data/example_rt_data.csv` below is all you need. Paths like
+`/Users/yourname/Desktop/...` only exist on your laptop, and `setwd()` breaks
+the moment anyone else opens your work.
+
+```{r}
+rt_data <- read_csv("data/example_rt_data.csv", show_col_types = FALSE)
+
+glimpse(rt_data)
+```
+
+Simulated reaction times from a made-up Stroop-like task: `participant`,
+`age_group` (child/adult), `condition` (congruent/incongruent), `rt_ms`, and
+`accuracy` (1 = correct).
+
+If you see 48 rows above, you are set up correctly.

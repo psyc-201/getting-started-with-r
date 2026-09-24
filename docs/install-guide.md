@@ -26,8 +26,8 @@ Go to <https://cloud.r-project.org/> and pick your operating system.
 
 ### Checking
 
-You will not open R directly, so there is nothing to check yet — `02-check-your-setup.R`
-will confirm it for you in a few minutes.
+You will not open R directly, so there is nothing to check yet — rendering
+`getting-started.qmd` will confirm it for you in a few minutes.
 
 ---
 
@@ -88,13 +88,16 @@ copy of this repository.
 
 ## Optional, but recommended later
 
-- **Quarto** (<https://quarto.org/docs/get-started/>) — for writing reports that
-  mix text, code, and figures. RStudio ships with support for it. We will use
-  this for assignments.
-- **A newer R than you have.** If `02-check-your-setup.R` warns that your R is
-  old, install the current version from the same link above. Installing a new R
-  does not remove the old one, and you may need to re-run
-  `01-install-packages.R` afterward.
+- **Quarto** — the authoring tool for reports that mix text, code, and figures,
+  and what every assignment this quarter is written in. **It comes bundled with
+  RStudio**, so you do not need to install it separately; the **Render** button
+  appears whenever you open a `.qmd` file. If you want it at the command line
+  too, get it from <https://quarto.org/docs/get-started/>. The course textbook
+  covers it in [Experimentology, Appendix C](https://experimentology.io/102-rmarkdown.html).
+- **A newer R than you have.** If your R is older than 4.2 (run
+  `R.version.string` in the Console to check), install the current version from
+  the same link above. Installing a new R does not remove the old one, and you
+  may need to reinstall the tidyverse afterward.
 
 ## A note on university-managed laptops
 

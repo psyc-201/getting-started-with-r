@@ -7,11 +7,11 @@ message, not a description of your feeling about the error message.
 
 ### `Error in library(tidyverse) : there is no package called 'tidyverse'`
 
-The package is not installed. Run `01-install-packages.R`, wait for it to
-finish, then try again. If it seemed to install but you still get this error,
-you may have installed it under a different version of R — reinstall R's
-packages by running `01-install-packages.R` once more after restarting RStudio
-(**Session** → **Restart R**).
+The package is not installed. Run the `install.packages("tidyverse")` chunk at
+the top of `getting-started.qmd` — click the green arrow at its top right — wait
+for it to finish, then render again. If it seemed to install but you still get
+this error, you may have installed it under a different version of R: restart
+RStudio (**Session** → **Restart R**) and run that chunk once more.
 
 ---
 
@@ -69,8 +69,8 @@ account than the one you are signed in as.
 
 ### Still stuck
 
-Run `02-check-your-setup.R` and copy **all** of its output. Post that, plus the
-exact error text, in the course forum. Say what you expected to happen and what
+Copy the **exact** error text — from the Console, or from the **Background Jobs**
+pane if rendering failed — and post it in the course forum. Say what you expected to happen and what
 happened instead. Screenshots of a whole screen are hard to read; copied text is
 easy.
 
