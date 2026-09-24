@@ -71,10 +71,13 @@ the dialog. You only need to do this the first time.
 
 ### GitHub Desktop: push fails with "permission denied" or 403
 
-You are pushing at the class repository instead of your fork. In GitHub
-Desktop: **Repository** menu → **Repository settings** → **Fork behavior** →
-choose **For my own purposes**, then push again. (The top of the GitHub Desktop
-window should say `yourname/getting-started-with-r`, not `psyc-201/...`.)
+You cloned the class repository instead of your own copy, and you do not have
+write access to the class copy. Look at the top of the GitHub Desktop window:
+if it says `psyc-201/getting-started-with-r` rather than
+`yourname/getting-started-with-r`, redo Part 2 of the README with the
+**Use this template** button, then clone *that*.
+
+Your edits are not lost — you can copy the changed files into the new folder.
 
 ---
 

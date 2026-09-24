@@ -34,25 +34,24 @@ Detailed, platform-by-platform instructions are in
 R and RStudio are two different programs. You install both, but you only ever
 open RStudio.
 
-## Part 2. Fork this repository
+## Part 2. Make your own copy
 
-A **fork** is your own copy of this repository, under your own GitHub account.
-You can commit and push to it freely; nothing you do affects the class copy.
+You will work in **your own copy** of this repository, under your own GitHub
+account. You can commit and push to it freely; nothing you do affects the class
+copy.
 
-1. At the top right of [this repository's GitHub page](https://github.com/psyc-201/getting-started-with-r),
-   click **Fork**, then **Create fork**. Keep the name as it is.
-2. You are now looking at *your* copy — the header reads
-   `yourname/getting-started-with-r`, with "forked from psyc-201/..." underneath.
-   Everything from here on happens in your copy.
-3. Click **Code** → **Open with GitHub Desktop**.
-4. GitHub Desktop asks where to put the folder. Somewhere like `Documents/GitHub`
+1. At the top of [this repository's GitHub page](https://github.com/psyc-201/getting-started-with-r),
+   click the green **Use this template** button, then **Create a new repository**.
+2. Owner: **your own account**. Name it `getting-started-with-r`, leave it
+   **Public**, and click **Create repository**.
+3. You are now looking at *your* copy — the header reads
+   `yourname/getting-started-with-r`. Everything from here on happens there.
+4. Click **Code** → **Open with GitHub Desktop**.
+5. GitHub Desktop asks where to put the folder. Somewhere like `Documents/GitHub`
    is a good choice. Avoid folders synced by Dropbox, Google Drive, or OneDrive —
    they fight with git.
-5. If it asks **"How are you planning to use this fork?"**, choose
-   **For my own purposes**. This is the one prompt worth reading: the other
-   option points your pushes at the class repository, where you do not have
-   permission, and you will get an error later.
 6. Click **Clone**.
+7. Post the link to your copy in the course forum so we know where to find it.
 
 Step-by-step version, including what to do when it goes sideways:
 **[docs/github-desktop.md](docs/github-desktop.md)**.

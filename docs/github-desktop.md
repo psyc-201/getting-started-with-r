@@ -21,38 +21,32 @@ A commit is not a backup and not a save. You still save files normally
 
 ---
 
-## Forking: getting your own copy
+## Getting your own copy of this repository
 
-Everyone in the class works from their own **fork** — a copy of the class
-repository that belongs to your GitHub account. You have full permission to
-commit and push to your fork, and nothing you do there touches the class copy.
+Everyone in the class works in their **own copy** of the class repository,
+owned by your GitHub account. You have full permission to commit and push
+there, and nothing you do touches the class copy.
 
 1. Open <https://github.com/psyc-201/getting-started-with-r>.
-2. Click **Fork** (top right) → **Create fork**. Leave the name and description
-   as they are, and leave "Copy the main branch only" checked.
-3. GitHub sends you to your copy. Check the header: it should read
-   **`yourname/getting-started-with-r`**, with *forked from psyc-201/…* in small
-   text underneath. If it still says `psyc-201/…`, you are on the class copy —
-   go back and fork.
-4. On *your* copy, click **Code** → **Open with GitHub Desktop**. Your browser
+2. Click the green **Use this template** → **Create a new repository**.
+   - Owner: your own account
+   - Name: `getting-started-with-r`
+   - Visibility: **Public** is fine, and makes it easier to get help
+3. Click **Create repository**.
+4. Check the header of the page you land on: it should read
+   **`yourname/getting-started-with-r`**. If it still says `psyc-201/…`, you are
+   on the class copy — go back and use the template button.
+5. On *your* copy, click **Code** → **Open with GitHub Desktop**. Your browser
    will ask permission to open the app — allow it.
-5. GitHub Desktop shows a **Clone a repository** dialog with a local path.
+6. GitHub Desktop shows a **Clone a repository** dialog with a local path.
    - Good: `~/Documents/GitHub/getting-started-with-r`
    - Bad: anywhere inside Dropbox, Google Drive, OneDrive, or iCloud Desktop.
      Those services sync files underneath git and cause strange conflicts.
-6. Click **Clone**.
-7. GitHub Desktop may then ask **"How are you planning to use this fork?"**
-   Choose **For my own purposes**. The other option, "To contribute to the
-   parent project", aims your pushes at `psyc-201/getting-started-with-r`, where
-   you do not have write access — you would hit a permissions error the first
-   time you push.
+7. Click **Clone**.
+8. Post the link to your copy in the course forum.
 
-If you picked the wrong option, you can fix it: **Repository** menu →
-**Repository settings** → **Fork behavior** → *For my own purposes*.
-
-You now have the folder on your laptop. Click **Open the repository in your
-external editor**, or find the folder and double-click
-`getting-started-with-r.Rproj`, which opens it in RStudio.
+Your copy starts with the same files but its own history. It is yours: rename
+it, add to it, keep it after the course ends.
 
 ---
 
@@ -83,7 +77,7 @@ read — and to undo — than one commit that does ten things.
 
 **"I committed but nothing is on GitHub."**
 You committed but did not push. Click **Push origin**. Then check you are
-looking at *your* fork on github.com, not the class copy — the class copy will
+looking at *your* copy on github.com, not the class copy — the class copy will
 never show your work.
 
 **"There's a file in the changes list I don't recognize."**
