@@ -21,21 +21,34 @@ A commit is not a backup and not a save. You still save files normally
 
 ---
 
-## Getting your copy of this repository
+## Forking: getting your own copy
+
+Everyone in the class works from their own **fork** — a copy of the class
+repository that belongs to your GitHub account. You have full permission to
+commit and push to your fork, and nothing you do there touches the class copy.
 
 1. Open <https://github.com/psyc-201/getting-started-with-r>.
-2. Click the green **Use this template** → **Create a new repository**.
-   - Owner: your own account
-   - Name: `getting-started-with-r`
-   - Visibility: **Public** is fine (and makes it easier to get help)
-3. Click **Create repository**.
-4. On your new repository's page, click **Code** → **Open with GitHub Desktop**.
-   Your browser will ask permission to open the app — allow it.
+2. Click **Fork** (top right) → **Create fork**. Leave the name and description
+   as they are, and leave "Copy the main branch only" checked.
+3. GitHub sends you to your copy. Check the header: it should read
+   **`yourname/getting-started-with-r`**, with *forked from psyc-201/…* in small
+   text underneath. If it still says `psyc-201/…`, you are on the class copy —
+   go back and fork.
+4. On *your* copy, click **Code** → **Open with GitHub Desktop**. Your browser
+   will ask permission to open the app — allow it.
 5. GitHub Desktop shows a **Clone a repository** dialog with a local path.
    - Good: `~/Documents/GitHub/getting-started-with-r`
    - Bad: anywhere inside Dropbox, Google Drive, OneDrive, or iCloud Desktop.
      Those services sync files underneath git and cause strange conflicts.
 6. Click **Clone**.
+7. GitHub Desktop may then ask **"How are you planning to use this fork?"**
+   Choose **For my own purposes**. The other option, "To contribute to the
+   parent project", aims your pushes at `psyc-201/getting-started-with-r`, where
+   you do not have write access — you would hit a permissions error the first
+   time you push.
+
+If you picked the wrong option, you can fix it: **Repository** menu →
+**Repository settings** → **Fork behavior** → *For my own purposes*.
 
 You now have the folder on your laptop. Click **Open the repository in your
 external editor**, or find the folder and double-click
@@ -69,7 +82,9 @@ read — and to undo — than one commit that does ten things.
 ## Things that will happen to you
 
 **"I committed but nothing is on GitHub."**
-You committed but did not push. Click **Push origin**.
+You committed but did not push. Click **Push origin**. Then check you are
+looking at *your* fork on github.com, not the class copy — the class copy will
+never show your work.
 
 **"There's a file in the changes list I don't recognize."**
 Probably `.RData`, `.Rhistory`, or `.DS_Store`. Those are already in

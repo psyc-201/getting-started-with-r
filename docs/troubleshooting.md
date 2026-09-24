@@ -5,27 +5,27 @@ message, not a description of your feeling about the error message.
 
 ---
 
-### `Error in library(tidyverse) : there is no package called 'tidyverse'`
+### `there is no package called 'tidyverse'` (or `'here'`)
 
-The package is not installed. Run the `install.packages("tidyverse")` chunk at
-the top of `getting-started.qmd` — click the green arrow at its top right — wait
-for it to finish, then render again. If it seemed to install but you still get
+The package is not installed. Run the `install.packages(c("tidyverse", "here"))`
+chunk at the top of `getting-started.qmd` — click the green arrow at its top
+right — wait for it to finish, then render again. If it seemed to install but you still get
 this error, you may have installed it under a different version of R: restart
 RStudio (**Session** → **Restart R**) and run that chunk once more.
 
 ---
 
-### `Error: 'data/example_rt_data.csv' does not exist in current working directory`
+### `Error: '...example_rt_data.csv' does not exist`
 
-RStudio is not pointed at the project folder. Almost always this means you
-opened the `.R` file directly instead of opening the project.
+RStudio is not pointed at the project. Almost always this means you opened the
+`.qmd` file on its own instead of opening the project.
 
-Fix: quit RStudio, then **double-click `getting-started-with-r.Rproj`**. Check
-the top of the Console — it should show the project path — or run `getwd()`.
+Fix: quit RStudio, then **double-click `getting-started-with-r.Rproj`**. Run
+`here()` in the Console — it should print the folder you cloned.
 
 Do **not** fix this with `setwd("/Users/yourname/...")`. That path exists only
-on your computer, so the script will break for anyone you send it to, including
-us when we grade it.
+on your computer, so your work will break for anyone you send it to, including
+us when we grade it. That is the whole reason we use `here()`.
 
 ---
 
@@ -51,10 +51,30 @@ persists, run `install.packages("rlang")` and restart R once more.
 
 ---
 
+### `here()` points at the wrong folder, or the data file is not found
+
+`here()` finds the top of your project by looking for
+`getting-started-with-r.Rproj`. Run `here()` on its own in the Console: it
+should print the folder you cloned. If it prints your home folder or your
+Desktop instead, you opened the `.qmd` file on its own rather than opening the
+project. Quit RStudio and reopen by double-clicking
+`getting-started-with-r.Rproj`.
+
+---
+
 ### macOS: "RStudio can't be opened because Apple cannot check it for malicious software"
 
 Right-click (or Control-click) the RStudio icon → **Open** → **Open** again in
 the dialog. You only need to do this the first time.
+
+---
+
+### GitHub Desktop: push fails with "permission denied" or 403
+
+You are pushing at the class repository instead of your fork. In GitHub
+Desktop: **Repository** menu → **Repository settings** → **Fork behavior** →
+choose **For my own purposes**, then push again. (The top of the GitHub Desktop
+window should say `yourname/getting-started-with-r`, not `psyc-201/...`.)
 
 ---
 

@@ -20,28 +20,35 @@ Background reading:
 
 ## (1) Load packages
 
-Run this once, by hand, if you have never installed the tidyverse. It is set to
+Run this once, by hand, if you have never installed these. It is set to
 `eval: false` so it does not run every time you render.
 
 ```{r}
 #| eval: false
-install.packages("tidyverse")
+install.packages(c("tidyverse", "here"))
 ```
 
 ```{r}
 #| message: false
 library(tidyverse)
+library(here)
 ```
 
 ## (2) Load the data
 
-Code chunks treat the folder holding this `.qmd` file as the working directory,
-so `data/example_rt_data.csv` below is all you need. Paths like
-`/Users/yourname/Desktop/...` only exist on your laptop, and `setwd()` breaks
-the moment anyone else opens your work.
+`here()` builds file paths starting from the top of your project — the folder
+holding `getting-started-with-r.Rproj`. That is why you open the project by
+double-clicking the `.Rproj` file, and why you never need `setwd()`.
 
 ```{r}
-rt_data <- read_csv("data/example_rt_data.csv", show_col_types = FALSE)
+here()
+```
+
+Paths built this way work on any computer, and keep working if you later move
+this file into a subfolder.
+
+```{r}
+rt_data <- read_csv(here("data", "example_rt_data.csv"), show_col_types = FALSE)
 
 glimpse(rt_data)
 ```

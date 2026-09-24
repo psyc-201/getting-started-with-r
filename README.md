@@ -6,7 +6,7 @@ first lab. When you are done you will have:
 - R and RStudio installed
 - GitHub Desktop installed and connected to your GitHub account
 - Your own copy of this repository on your laptop
-- One Quarto document that loads the tidyverse and reads a data file
+- One Quarto document that loads the tidyverse, and reads a data file with `here()`
 - One commit of your own, pushed to GitHub
 
 Everything here is point-and-click. **You do not need to use the terminal.**
@@ -34,17 +34,25 @@ Detailed, platform-by-platform instructions are in
 R and RStudio are two different programs. You install both, but you only ever
 open RStudio.
 
-## Part 2. Get your own copy of this repository
+## Part 2. Fork this repository
 
-1. At the top of [this repository's GitHub page](https://github.com/psyc-201/getting-started-with-r),
-   click the green **Use this template** button, then **Create a new repository**.
-2. Name it `getting-started-with-r`, leave it **Public**, and click
-   **Create repository**. You now own a copy.
-3. On *your* new repository's page, click **Code** → **Open with GitHub Desktop**.
-4. GitHub Desktop will ask where to put the folder. Somewhere like
-   `Documents/GitHub` is a good choice. Avoid folders synced by Dropbox,
-   Google Drive, or OneDrive — they fight with git.
-5. Click **Clone**.
+A **fork** is your own copy of this repository, under your own GitHub account.
+You can commit and push to it freely; nothing you do affects the class copy.
+
+1. At the top right of [this repository's GitHub page](https://github.com/psyc-201/getting-started-with-r),
+   click **Fork**, then **Create fork**. Keep the name as it is.
+2. You are now looking at *your* copy — the header reads
+   `yourname/getting-started-with-r`, with "forked from psyc-201/..." underneath.
+   Everything from here on happens in your copy.
+3. Click **Code** → **Open with GitHub Desktop**.
+4. GitHub Desktop asks where to put the folder. Somewhere like `Documents/GitHub`
+   is a good choice. Avoid folders synced by Dropbox, Google Drive, or OneDrive —
+   they fight with git.
+5. If it asks **"How are you planning to use this fork?"**, choose
+   **For my own purposes**. This is the one prompt worth reading: the other
+   option points your pushes at the class repository, where you do not have
+   permission, and you will get an error later.
+6. Click **Clone**.
 
 Step-by-step version, including what to do when it goes sideways:
 **[docs/github-desktop.md](docs/github-desktop.md)**.
@@ -56,8 +64,9 @@ RStudio *inside this project* — which is what makes the file path in the
 document work on your computer and on everyone else's.
 
 Then open **`getting-started.qmd`** from the Files pane (bottom right) and click
-**Render**. The first time, you will need to run the `install.packages("tidyverse")`
-chunk by hand — click the green arrow at its top right and wait 5–15 minutes.
+**Render**. The first time, you will need to run the
+`install.packages(c("tidyverse", "here"))` chunk by hand — click the green arrow
+at its top right and wait 5–15 minutes.
 
 If the document renders and shows you 48 rows of data, you are set up correctly.
 
@@ -83,7 +92,7 @@ That loop — *edit, save, commit, push* — is the whole workflow for the quart
 ```
 getting-started-with-r/
 ├── getting-started-with-r.Rproj   open this to start work
-├── getting-started.qmd            load packages, load data
+├── getting-started.qmd            load packages, load data with here()
 ├── data/
 │   └── example_rt_data.csv        48 rows of simulated reaction-time data
 └── docs/

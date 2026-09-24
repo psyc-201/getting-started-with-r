@@ -97,7 +97,7 @@ copy of this repository.
 - **A newer R than you have.** If your R is older than 4.2 (run
   `R.version.string` in the Console to check), install the current version from
   the same link above. Installing a new R does not remove the old one, and you
-  may need to reinstall the tidyverse afterward.
+  may need to reinstall the tidyverse and here afterward.
 
 ## A note on university-managed laptops
 
